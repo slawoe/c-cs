@@ -1,0 +1,56 @@
+/* General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    background-color: #fff;
+}
+.structureWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.gridWrapper {
+    margin: 0 auto;
+    padding: 0 25px;
+    max-width: 1186px;
+}
+.header {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 0;
+    background-color: darkblue;
+}
+.content {
+    padding: 50px 0;
+    flex: 1 1 0;
+}
+.footer {
+    padding: 10px 0;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #333;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    width: auto;
+    height: 36px;
+}
+
+/* Text */
+.headline {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+.paragraph {
+    margin-top: 0.5em;
+}
+.paragraph:first-of-type {
+    margin-top: 0;
+}
+
+/* Fizz Buzz list */
