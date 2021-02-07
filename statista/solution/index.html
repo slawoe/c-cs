@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resets.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
-    <script src="js/script.js"></script>
-</head>
-<body>
-    <div class="structureWrapper">
-        <div id="header" class="header">
-            <div class="gridWrapper">
-                <img src="img/statistaLogo.png" id="logo" class="logo" />
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resets.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    />
+    <title>
+      • Statista - The Statistics Portal for Market Data, Market Research and
+      Market Studies
+    </title>
+  </head>
+  <body>
+    <header>
+      <div class="gridWrapper">
+        <img src="./img/statistaLogo.svg" class="logo" alt="logo" />
+      </div>
+    </header>
 
-        <div id="content" class="content">
-            <div class="gridWraper">
-                <div id="introductionText">
-                    <img src="img/headline.jpg" class="headline" />
-                    <p class="paragraph">Statista is one of the world’s leading statistics portals.</p>
-                    <p class="paragraph">As a multiple award-winning innovative digital company, Statista provides customers such as Google, Bloomberg, Forbes, Procter & Gamble, or Porsche with high-quality research & analysis, data intelligence, and content marketing products and services.</p>
-                    <p class="paragraph">With 900 employees from over 57 nations and 12 subsidiaries in Europe, North America, and Asia, Statista derives its innovative energy from its internationality and diversity.</p>
-                    <p class="paragraph">Statista provides a company culture based around learning by doing and entrepreneurship, offers great career opportunities, and combines the pioneering spirit of a start-up with the stability of an established company.</p>
-                </div>
-                <div id="fizzBuzzList">
-                    <!-- FuzzBuzz list goes here -->
-                </div>
-            </div>
-        </div>
+    <main>
+      <div class="gridWrapper">
+        <section id="introductionText">
+          <h1><strong>Working</strong> at Statista</h1>
+          <p>Statista is one of the world’s leading statistics portals.</p>
+          <p>
+            As a multiple award-winning innovative digital company, Statista
+            provides customers such as Google, Bloomberg, Forbes, Procter &
+            Gamble, or Porsche with high-quality research & analysis, data
+            intelligence, and content marketing products and services.
+          </p>
+          <p>
+            With 900 employees from over 57 nations and 12 subsidiaries in
+            Europe, North America, and Asia, Statista derives its innovative
+            energy from its internationality and diversity.
+          </p>
+          <p>
+            Statista provides a company culture based around learning by doing
+            and entrepreneurship, offers great career opportunities, and
+            combines the pioneering spirit of a start-up with the stability of
+            an established company.
+          </p>
+        </section>
+        <div class="horizontalDivider"></div>
+        <section id="fizzBuzzChallenge">
+          <h2>The fizzbuzz coding challenge</h2>
+          <div id="fizzBuzzIntroduction">
+            <h3>About the challenge</h3>
+            <p>
+              At statista, the quality of each applicant for the development
+              team is tested through a coding challenge. An example of what this
+              challenge can look like can be seen here in the form of the
+              fizzbuzz list. Every number up to 100 that is divisible by 3, by 5
+              or by both numbers should be automatically replaced by a
+              predefined word and highlighted.
+            </p>
+            <p>
+              Are you as curious as I am to see whether the applicant here has
+              managed this? Let's take a look inside the box.
+            </p>
+          </div>
+          <div id="fizzBuzzListWrapper">
+            <h3>The fizzbuzz list</h3>
+            <ul id="fizzBuzzList">
+              <!-- FuzzBuzz list goes here -->
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
 
-        <div id="footer" class="footer">
-            <div class="gridWrapper">
-                The Statista Product & IT team appreciates your interest and effort and wishes good luck!
-            </div>
-        <div>
-    </div>
-</body>
+    <footer>
+      <div class="gridWrapper">
+        <small
+          >Thanks for the fun coding challenge. I look forward to meeting you
+          guys soon!</small
+        >
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
