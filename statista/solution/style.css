@@ -1,56 +1,200 @@
 /* General */
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #444;
-    background-color: #fff;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
-.structureWrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+html {
+  font-size: 1rem;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #444;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  padding: 25px 0;
+  background-color: #143356;
+}
+main {
+  padding: 15px 0;
+  flex: 1 1 0;
+}
+footer {
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  background-color: #0f2741;
+}
+section {
+  padding: 50px 0;
 }
 .gridWrapper {
-    margin: 0 auto;
-    padding: 0 25px;
-    max-width: 1186px;
-}
-.header {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 25px 0;
-    background-color: darkblue;
-}
-.content {
-    padding: 50px 0;
-    flex: 1 1 0;
-}
-.footer {
-    padding: 10px 0;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.4);
-    background-color: #333;
+  margin: 0 auto;
+  max-width: 1186px;
 }
 
 /* Logo */
 .logo {
-    display: block;
-    width: auto;
-    height: 36px;
+  display: block;
+  height: 36px;
 }
 
 /* Text */
-.headline {
-    font-size: 2.5em;
-    font-weight: 300;
-    margin-bottom: 0.5em;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
 }
-.paragraph {
-    margin-top: 0.5em;
+h2 {
+  font-size: 1.2rem;
+  color: #0075d5;
+  text-transform: uppercase;
 }
-.paragraph:first-of-type {
-    margin-top: 0;
+h2,
+h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04rem;
+}
+p {
+  margin-top: 0.5rem;
+}
+section > p:first-of-type {
+  margin-top: 0;
+}
+small {
+  font-size: 0.9rem;
+}
+strong {
+  font-weight: 400;
+}
+#introductionText {
+  text-align: center;
+}
+
+/* Designing DIVs */
+.horizontalDivider {
+  display: block;
+  background-color: #ccc;
+  width: 50%;
+  height: 1px;
+  margin: 0 auto;
 }
 
 /* Fizz Buzz list */
+#fizzBuzzChallenge {
+  display: grid;
+  grid-template: auto auto / 50% 50%;
+}
+#fizzBuzzChallenge > h2 {
+  grid-area: 1 / 1 / 2 / 3;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#fizzBuzzIntroduction {
+  grid-area: 2 / 1 / 3 / 2;
+}
+#fizzBuzzListWrapper {
+  grid-area: 2 / 2 / 3 / 3;
+  border-top: solid 3px #0b85e5;
+  text-align: center;
+  margin-left: 100px;
+  padding: 10px 0;
+}
+#fizzBuzzListWrapper > h3 {
+  text-transform: uppercase;
+}
+#fizzBuzzList > li {
+  background-color: #f5f8fb;
+  padding: 4px 0;
+  border-bottom: solid 0.01px rgb(220, 220, 220);
+}
+#fizzBuzzList > li:first-of-type {
+  border-top: solid 0.01px rgb(220, 220, 220);
+}
+.fizzBuzzList__item-pulse {
+  animation: pulse 1s infinite;
+  color: #0e273d;
+  font-weight: 700;
+}
+.fizzBuzzList__item-appear {
+  animation: appear ease-out 2s infinite;
+  color: #0b85e5;
+}
+.fizzBuzzList__item-buzz {
+  animation: buzz 0.15s infinite;
+  color: #7cc301;
+}
+
+/* Keyframe Animations*/
+@keyframes pulse {
+  0%,
+  100% {
+    -webkit-text-fill-color: #0b85e5;
+    -webkit-text-stroke: 0.75px #0e273d;
+  }
+  50% {
+    -webkit-text-fill-color: #0e273d;
+    -webkit-text-stroke: 0.75px #0b85e5;
+  }
+}
+@keyframes appear {
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: #0b85e5;
+  }
+}
+@keyframes buzz {
+  0%,
+  100% {
+    transform: rotate(0.75deg);
+  }
+  50% {
+    transform: rotate(-0.75deg);
+  }
+}
+
+/* Media Only Screens */
+@media only screen and (max-width: 1186px) {
+  .gridWrapper {
+    margin: 0 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .logo {
+    display: block;
+    margin: 0 auto;
+    height: 27px;
+  }
+  main {
+    padding: 0;
+  }
+  header {
+    padding: 20px 0;
+  }
+  section {
+    padding: 25px 0;
+  }
+  #fizzBuzzChallenge {
+    display: flex;
+    flex-direction: column;
+  }
+  #fizzBuzzIntroduction {
+    text-align: center;
+    padding: 1rem;
+  }
+  #fizzBuzzListWrapper {
+    margin: 10px 0 0;
+  }
+  #fizzBuzzChallenge > h2 {
+    margin-bottom: 0.5rem;
+  }
+}
