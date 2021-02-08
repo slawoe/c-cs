@@ -169,32 +169,31 @@ strong {
   }
 }
 @media only screen and (max-width: 750px) {
-  .logo {
-    display: block;
-    margin: 0 auto;
-    height: 27px;
+  header {
+    padding: 20px 0;
   }
   main {
     padding: 0;
   }
-  header {
-    padding: 20px 0;
-  }
   section {
     padding: 25px 0;
+  }
+  .logo {
+    margin: 0 auto;
+    height: 27px;
   }
   #fizzBuzzChallenge {
     display: flex;
     flex-direction: column;
   }
-  #fizzBuzzIntroduction {
-    text-align: center;
-    padding: 1rem;
+  #fizzBuzzChallenge > h2 {
+    margin-bottom: 0.5rem;
   }
   #fizzBuzzListWrapper {
     margin: 10px 0 0;
   }
-  #fizzBuzzChallenge > h2 {
-    margin-bottom: 0.5rem;
+  #fizzBuzzIntroduction {
+    text-align: center;
+    padding: 1rem;
   }
 }
