@@ -1,2 +1,4 @@
 # codingchallenges
-Coding challenges from different companies with solutions
+Coding challenges.
+
+For challenges read the READMEs in the different folders. 
