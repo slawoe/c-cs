@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <h1>Wo/Was essen wir heute?</h1>
+    <form>
+      <h2>Kategorien</h2>
+      <fieldset>
+        <input
+          type="radio"
+          id="all"
+          name="Kategorie"
+          value="all"
+          checked="true"
+        />
+        <label for="all">Alles</label>
+        <input type="radio" id="burger" name="Kategorie" value="burger" />
+        <label for="burger">Burger</label>
+        <input
+          type="radio"
+          id="pizzapasta"
+          name="Kategorie"
+          value="pizzapasta"
+        />
+        <label for="pizzapasta">Pizza/Pasta</label>
+        <input type="radio" id="asia" name="Kategorie" value="asia" />
+        <label for="asia">Asiatisch</label>
+        <input type="radio" id="homemade" name="Kategorie" value="homemade" />
+        <label for="homemade">Hausmannskost</label>
+        <input type="radio" id="other" name="Kategorie" value="other" />
+        <label for="other">Sonstiges</label>
+      </fieldset>
+      <h2>Entfernung</h2>
+      <fieldset>
+        <input
+          type="radio"
+          id="alldist"
+          name="Entfernung"
+          value="alldist"
+          checked="true"
+        />
+        <label for="alldist">Egal</label>
+        <input type="radio" id="near" name="Entfernung" value="near" />
+        <label for="near">Nah dran</label>
+        <input type="radio" id="nearest" name="Entfernung" value="nearest" />
+        <label for="nearest">So nah wie möglich</label>
+      </fieldset>
+      <h2>Preis</h2>
+      <fieldset>
+        <input
+          type="radio"
+          id="allprices"
+          name="Preis"
+          value="allprices"
+          checked="true"
+        />
+        <label for="allprices">Egal</label>
+        <input type="radio" id="cheap" name="Preis" value="cheap" />
+        <label for="cheap">Günstig</label>
+        <input type="radio" id="eotm" name="Preis" value="eotm" />
+        <label for="eotm">Ende des Monats</label>
+      </fieldset>
+      <h2>Veggietauglichkeit</h2>
+      <fieldset>
+        <input
+          type="radio"
+          id="alltypes"
+          name="Veggietauglich"
+          value="alltypes"
+          checked="true"
+        />
+        <label for="alltypes">Egal</label>
+        <input
+          type="radio"
+          id="vegeterian"
+          name="Veggietauglich"
+          value="vegeterian"
+        />
+        <label for="vegeterian">Vegetarische Gerichte</label>
+        <input type="radio" id="vegan" name="Veggietauglich" value="vegan" />
+        <label for="vegan">Vegane Gerichte</label>
+      </fieldset>
+    </form>
+    <h2>Ergebnisse</h2>
+    <div></div>
+    <button>Reset</button>
+    <button>Randomize</button>
+    <script src="./app.mjs"></script>
+  </body>
+</html>
