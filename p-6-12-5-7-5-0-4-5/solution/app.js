@@ -8,8 +8,6 @@ const priceFieldset = document.querySelector("#price");
 const veggieFieldset = document.querySelector("#veggie");
 const form = document.querySelector("form");
 
-console.log(data);
-
 let category = "all";
 let distance = "alldist";
 let price = "allprices";
@@ -30,6 +28,18 @@ priceFieldset.addEventListener("change", () => {
 });
 veggieFieldset.addEventListener("change", () => {
   veggie = finder(veggieFieldset);
+});
+
+function reset() {
+  category = "all";
+  distance = "alldist";
+  price = "allprices";
+  veggie = "alltypes";
+  form.reset();
+}
+
+resetButton.addEventListener("click", () => {
+  reset();
 });
 
 form.addEventListener("change", () => {
