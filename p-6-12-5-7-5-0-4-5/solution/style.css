@@ -24,7 +24,7 @@ h2 {
   padding: 1.5rem 0 1rem;
 }
 
-p {
+li {
   padding: 0.5rem;
   font-size: 1.25rem;
 }
@@ -84,8 +84,8 @@ button:focus {
   display: flex;
 }
 
-.resultBox {
-  padding: 1rem;
+.result {
+  padding: 1rem 0 1rem 3rem;
   border: 1px black solid;
   width: 50%;
 }
