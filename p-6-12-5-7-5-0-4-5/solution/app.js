@@ -14,48 +14,56 @@ let priceStars = "";
 let veggieStars = "";
 
 let category = "all";
-let distance = "alldist";
-let price = "allprices";
-let veggie = "alltypes";
+let distance = 1;
+let price = 1;
+let veggie = 1;
 
-data.forEach(function (element) {
-  let listElement = document.createElement("li");
+function theStarsSwitch(element) {
   switch (element.distance) {
-    case "alldist":
+    case 1:
       distanceStars = "*";
       break;
-    case "near":
+    case 2:
       distanceStars = "**";
       break;
-    case "nearest":
+    case 3:
       distanceStars = "***";
       break;
   }
   switch (element.price) {
-    case "allprices":
+    case 1:
       priceStars = "*";
       break;
-    case "cheap":
+    case 2:
       priceStars = "**";
       break;
-    case "cheapest":
+    case 3:
       priceStars = "***";
       break;
   }
   switch (element.veggie) {
-    case "alltypes":
+    case 1:
       veggieStars = "*";
       break;
-    case "vegeterian":
+    case 2:
       veggieStars = "**";
       break;
-    case "vegan":
+    case 3:
       veggieStars = "***";
       break;
   }
-  listElement.innerHTML = `${element.name} | 🚗 ${distanceStars} | 💶 ${priceStars} | 🥦 ${veggieStars}`;
-  result.append(listElement);
-});
+}
+
+function loadEmAll() {
+  data.forEach(function (element) {
+    let listElement = document.createElement("li");
+    theStarsSwitch(element);
+    listElement.innerHTML = `${element.name} | 🚗 ${distanceStars} | 💶 ${priceStars} | 🥦 ${veggieStars}`;
+    result.append(listElement);
+  });
+}
+
+loadEmAll();
 
 function finder(fieldset) {
   return fieldset.querySelector("input:checked").value;
@@ -74,28 +82,44 @@ veggieFieldset.addEventListener("change", () => {
   veggie = finder(veggieFieldset);
 });
 
-function reset() {
-  category = "all";
-  distance = "alldist";
-  price = "allprices";
-  veggie = "alltypes";
-  form.reset();
-}
-
 resetButton.addEventListener("click", () => {
-  reset();
+  location.reload();
 });
 
 form.addEventListener("change", () => {
-  if (category != "all") {
-    console.log(
-      data.filter(
-        (rest) =>
-          rest.category === category &&
-          rest.price === price &&
-          rest.distance === distance &&
-          rest.veggie === veggie
-      )
+  result.innerHTML = "";
+  if (category === "all") {
+    let resultRests = data.filter(
+      (rest) =>
+        rest.distance >= distance &&
+        rest.price >= price &&
+        rest.veggie >= veggie
     );
+    resultRests.forEach(function (element) {
+      let listElement = document.createElement("li");
+      theStarsSwitch(element);
+      listElement.innerHTML = `${element.name} | 🚗 ${distanceStars} | 💶 ${priceStars} | 🥦 ${veggieStars}`;
+      result.append(listElement);
+    });
+  } else {
+    let resultRests = data.filter(
+      (rest) =>
+        rest.category === category &&
+        rest.distance >= distance &&
+        rest.price >= price &&
+        rest.veggie >= veggie
+    );
+    resultRests.forEach(function (element) {
+      let listElement = document.createElement("li");
+      theStarsSwitch(element);
+      listElement.innerHTML = `${element.name} | 🚗 ${distanceStars} | 💶 ${priceStars} | 🥦 ${veggieStars}`;
+      result.append(listElement);
+    });
+  }
+  if (result.innerHTML === "") {
+    let emptyText = document.createElement("p");
+    emptyText.innerHTML =
+      "Passen Sie bitte ihre Suchfilter an, da Ihnen in der jetzigen Auswahl keine Ergebnisse vorliegen";
+    result.append(emptyText);
   }
 });
