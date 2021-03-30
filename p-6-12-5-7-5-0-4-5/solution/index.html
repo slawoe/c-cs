@@ -17,7 +17,7 @@
     <h1>Wo/Was essen wir heute?</h1>
     <form>
       <h2>Kategorien</h2>
-      <fieldset class="category">
+      <fieldset id="category">
         <input type="radio" id="all" name="Kategorie" value="all" />
         <label for="all">Alles</label>
         <input type="radio" id="burger" name="Kategorie" value="burger" />
@@ -39,61 +39,45 @@
       <div class="distanceWrapper">
         <h2>Entfernung</h2>
         <fieldset id="distance">
-          <input type="radio" id="alldist" name="Entfernung" value="alldist" />
+          <input type="radio" id="alldist" name="Entfernung" value="1" />
           <label for="alldist">Egal</label>
-          <input type="radio" id="near" name="Entfernung" value="near" />
+          <input type="radio" id="near" name="Entfernung" value="2" />
           <label for="near">Nah dran </label>
-          <input type="radio" id="nearest" name="Entfernung" value="nearest" />
+          <input type="radio" id="nearest" name="Entfernung" value="3" />
           <label for="nearest">So nah wie möglich</label>
         </fieldset>
       </div>
       <div class="priceWrapper">
         <h2>Preis</h2>
         <fieldset id="price">
-          <input type="radio" id="allprices" name="Preis" value="allprices" />
+          <input type="radio" id="allprices" name="Preis" value="1" />
           <label for="allprices">Egal</label>
-          <input type="radio" id="cheap" name="Preis" value="cheap" />
+          <input type="radio" id="cheap" name="Preis" value="2" />
           <label for="cheap">Günstig</label>
-          <input type="radio" id="eotm" name="Preis" value="eotm" />
+          <input type="radio" id="eotm" name="Preis" value="3" />
           <label for="eotm">Ende des Monats </label>
         </fieldset>
       </div>
       <h2>Veggietauglichkeit</h2>
-      <fieldset class="veggie">
-        <input
-          type="radio"
-          id="alltypes"
-          name="Veggietauglich"
-          value="alltypes"
-        />
+      <fieldset id="veggie">
+        <input type="radio" id="alltypes" name="Veggietauglich" value="1" />
         <label for="alltypes">Egal </label>
-        <input
-          type="radio"
-          id="vegeterian"
-          name="Veggietauglich"
-          value="vegeterian"
-        />
+        <input type="radio" id="vegeterian" name="Veggietauglich" value="2" />
         <label for="vegeterian">Vegetarische Gerichte </label>
-        <input type="radio" id="vegan" name="Veggietauglich" value="vegan" />
+        <input type="radio" id="vegan" name="Veggietauglich" value="3" />
         <label for="vegan">Vegane Gerichte</label>
       </fieldset>
     </form>
     <div class="resultsWrapper">
       <h2>Ergebnisse</h2>
       <div class="resultBoxAndButtons">
-        <div class="resultBox">
-          <p>Fakedata1</p>
-          <p>Fakedata2</p>
-          <p>Fakedata3</p>
-          <p>Fakedata4</p>
-          <p>Fakedata5</p>
-        </div>
+        <ol class="result"></ol>
         <div class="buttons">
           <button id="reset">Reset</button>
           <button id="randomize">Randomize</button>
         </div>
       </div>
     </div>
-    <script src="./app.mjs"></script>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>

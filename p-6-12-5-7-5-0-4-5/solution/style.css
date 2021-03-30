@@ -24,8 +24,14 @@ h2 {
   padding: 1.5rem 0 1rem;
 }
 
-p {
+li {
   padding: 0.5rem;
+  font-size: 1.25rem;
+}
+
+p {
+  color: darkred;
+  padding: 1rem;
   font-size: 1.25rem;
 }
 
@@ -38,10 +44,6 @@ fieldset {
 
 input[type="radio"] {
   display: none;
-}
-
-input[type="radio"]:checked + label {
-  background: lightblue;
 }
 
 label {
@@ -84,8 +86,8 @@ button:focus {
   display: flex;
 }
 
-.resultBox {
-  padding: 1rem;
+.result {
+  padding: 0 3.5rem;
   border: 1px black solid;
   width: 50%;
 }
@@ -94,4 +96,8 @@ button:focus {
   width: 50%;
   align-self: flex-end;
   text-align: right;
+}
+
+.lightblue + label {
+  background: lightblue;
 }

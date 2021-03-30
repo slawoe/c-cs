@@ -5,7 +5,7 @@ const data = [
     price: 1,
     veggie: 3,
     adress: "Spitalerstraße 22, 20095 Hamburg",
-    category: "Alles",
+    category: "all",
   },
   {
     name: "Europapassagen",
@@ -13,7 +13,7 @@ const data = [
     price: 2,
     veggie: 3,
     adress: "Ballindamm 40 EG2, 20095 Hamburg",
-    category: "Alles",
+    category: "all",
   },
   {
     name: "Max & Consorten",
@@ -21,7 +21,7 @@ const data = [
     price: 1,
     veggie: 2,
     adress: "Spadenteich 1, 20099 Hamburg",
-    category: "Hausmannskost",
+    category: "homemade",
   },
   {
     name: "Luigi's",
@@ -29,7 +29,7 @@ const data = [
     price: 2,
     veggie: 3,
     adress: "Ditmar-Koel-Straße 21, 20459 Hamburg",
-    category: "Pizza/Pasta",
+    category: "pizzapasta",
   },
   {
     name: "Bella Italia",
@@ -37,7 +37,7 @@ const data = [
     price: 1,
     veggie: 2,
     adress: "Brandstwiete 58, 20457 Hamburg",
-    category: "Pizza/Pasta",
+    category: "pizzapasta",
   },
   {
     name: "Restaurant Kabul",
@@ -45,7 +45,7 @@ const data = [
     price: 1,
     veggie: 2,
     adress: "Steindamm 53, 20099 Hamburg",
-    category: "Sonstiges",
+    category: "other",
   },
   {
     name: "Goot",
@@ -53,7 +53,7 @@ const data = [
     price: 3,
     veggie: 1,
     adress: "Depenau 10, 20095 Hamburg",
-    category: "Hausmannskost",
+    category: "homemade",
   },
   {
     name: "O-ren Ishii",
@@ -61,7 +61,7 @@ const data = [
     price: 3,
     veggie: 3,
     adress: "Kleine Reichenstraße 18, 20457 Hamburg",
-    category: "Asiatisch",
+    category: "asia",
   },
   {
     name: "Better Burger Company",
@@ -69,7 +69,7 @@ const data = [
     price: 2,
     veggie: 3,
     adress: "Rosenstraße Ecke, Gertrudenkirchhof, 20095 Hamburg",
-    category: "Burger",
+    category: "burger",
   },
   {
     name: "Bucks Burger",
@@ -77,7 +77,7 @@ const data = [
     price: 2,
     veggie: 3,
     adress: "Kurze Mühren 13, 20095 Hamburg",
-    category: "Burger",
+    category: "burger",
   },
   {
     name: "Mr. Cheng",
@@ -85,7 +85,7 @@ const data = [
     price: 3,
     veggie: 3,
     adress: "Speersort 1, 20095 Hamburg",
-    category: "Asiatisch",
+    category: "asia",
   },
   {
     name: "Franco Rathauspassage",
@@ -93,7 +93,7 @@ const data = [
     price: 2,
     veggie: 3,
     adress: "Rathausmarkt 7, 20095 Hamburg",
-    category: "Pizza/Pasta",
+    category: "pizzapasta",
   },
 ];
 
