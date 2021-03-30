@@ -46,10 +46,6 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"]:checked + label {
-  background: lightblue;
-}
-
 label {
   font-size: 1.25rem;
   border: 1px solid black;
@@ -100,4 +96,8 @@ button:focus {
   width: 50%;
   align-self: flex-end;
   text-align: right;
+}
+
+.lightblue + label {
+  background: lightblue;
 }
