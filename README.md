@@ -1,4 +1,3 @@
-# codingchallenges
-Coding challenges.
+# Coding challenges
 
-For challenges read the READMEs in the different folders. 
+For the challenges and the challenge instructions read the READMEs in the different challenge folders. 
